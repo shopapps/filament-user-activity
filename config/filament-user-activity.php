@@ -17,4 +17,14 @@ return [
             ],
         ],
     ],
+    'permissions' => [
+        'spatie' => [
+            'active' => env('FILAMENT_USER_ACTIVITY_SPATIE_PERMISSIONS_ACTIVE', false),
+            'permission' => env('FILAMENT_USER_ACTIVITY_SPATIE_PERMISSION', 'filament_user_activity.access'),
+        ],
+        'allowed' => [
+            'emails' => array_map('trim', explode(',', env('FILAMENT_USER_ACTIVITY_ALLOWED_EMAILS', '')) ?? []) // string of comma delimited emails e.g. 'user1@test.com,user2@test.com'
+            'user_ids' => array_map('trim', explode(',', env('FILAMENT_USER_ACTIVITY_ALLOWED_USER_IDS', '')) ?? []) // string of comma delimited user ids e.g. '1,2,3'
+        ],
+    ]
 ];
