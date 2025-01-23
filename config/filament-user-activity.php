@@ -17,9 +17,10 @@ return [
             ],
         ],
     ],
-    'permissions' => [
+    'access_control' => [
+        'enabled' => env('FILAMENT_USER_ACTIVITY_ACCESS_CONTROL_ENABLED', false), // set to true to restrict access to the Resource
         'spatie' => [
-            'active' => env('FILAMENT_USER_ACTIVITY_SPATIE_PERMISSIONS_ACTIVE', false),
+            'enabled' => env('FILAMENT_USER_ACTIVITY_SPATIE_PERMISSIONS_ACTIVE', false),
             'permission' => env('FILAMENT_USER_ACTIVITY_SPATIE_PERMISSION', 'filament_user_activity.access'),
         ],
         'allowed' => [
