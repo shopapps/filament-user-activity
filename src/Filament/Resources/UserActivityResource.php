@@ -82,7 +82,7 @@ class UserActivityResource extends Resource
             ])
             ->paginationPageOptions([50, 100, 250])
             ->defaultSort('created_at', 'DESC')
-            ->poll(20);
+            ->poll('20s');
     }
 
     public static function getRelations(): array
