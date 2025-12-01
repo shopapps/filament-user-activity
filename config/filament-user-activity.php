@@ -28,4 +28,10 @@ return [
             'user_ids' => array_map('trim', explode(',', env('FILAMENT_USER_ACTIVITY_ALLOWED_USER_IDS', '')) ?? []), // string of comma delimited user ids e.g. '1,2,3'
         ],
     ],
+    'ignore_urls' => [
+        [
+//            '/livewire/*',
+            '/livewire/update',
+        ],
+    ],
 ];
